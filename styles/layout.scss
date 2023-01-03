@@ -13,9 +13,15 @@ ul {
   padding: 0;
   display: flex;
   flex-direction: row;
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fsports-background&psig=AOvVaw2iU49b7jgCF1JKvZEUv8Vr&ust=1672860971407000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMCh__CSrPwCFQAAAAAdAAAAABAE");
 }
 
 li {
   margin: 3em;
 
+}
+
+.quiz-sports {
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fsports-background&psig=AOvVaw2iU49b7jgCF1JKvZEUv8Vr&ust=1672860971407000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMCh__CSrPwCFQAAAAAdAAAAABAE");
+  border: solid blue 3px;
 }
