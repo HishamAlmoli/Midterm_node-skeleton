@@ -3,35 +3,45 @@
 
 <head>
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
+    <%- include('partials/_assets') %>
 
   <title>Document</title>
 </head>
 
 <body>
   <%- include('partials/_header') %>
-  <br/>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
   <form method="POST" action="/register">
-    Email:
-    <input type="email" name="email" required></input>
-    <br/><br/>
-    Password:
-    <input type="password" name="password" required></input>
-    <br/><br/>
-    <button type="submit">Submit</button>
-  </form>
+    <h3>
+      Register New Account
+    </h3>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" name="name" class="form-control" placeholder="Enter username">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" class="form-control" placeholder="Enter email" id="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" name="password" class="form-control" placeholder="Enter password" id="pwd">
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+</div>
+</div>
 </body>
 
 </html>
+
+
+<!-- <form method="POST" action="/register">
+  Email:
+  <input type="email" name="email" required></input>
+  <br/><br/>
+  Password:
+  <input type="password" name="password" required></input>
+  <br/><br/>
+  <button type="submit">Submit</button> -->

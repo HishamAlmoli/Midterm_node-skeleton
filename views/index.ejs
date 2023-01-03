@@ -3,36 +3,8 @@
 
 <head>
   <title>Home Page</title>
+  <%- include('partials/_assets') %>
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-
-  <!-- Bootstrap CSS -->
-  <link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-  crossorigin="anonymous"
-/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-  <!--Bungee Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
-  <link rel="stylesheet" href="/styles/nav.css" />
-
-
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/app.js"></script>
 </head>
 
 <body>
@@ -41,21 +13,23 @@
 
 
   <header>
-    <h1 id="welcome">WELCOME TO THE QUIZ APP</h1>
+    <h1 id="welcome">WELCOME TO QUIZAPP!</h1>
   </header>
 
     <ul class="quizzes-container">
       <li>
         <h5>
           <a class="quiz-sports" href="/sports">Sports
-            <i class="fa-solid fa-basketball"></i>
+            <i class="fa-solid fa-bounce fa-basketball">
+              <!-- <img src="images/sports.jpeg"> -->
+            </i>
           </a>
         </h5>
       </li>
       <li>
         <h5>
           <a class="quiz-movies" href="/movies">Movies
-            <i class="fa-solid fa-duotone fa-film"></i>
+            <i class="fa-solid fa-bounce fa-duotone fa-film"></i>
           </a>
         </h5>
 
@@ -63,7 +37,7 @@
       <li>
         <h5>
           <a class="quiz-countries" href="/countries">Countries
-            <i class="fa-solid fa-earth-africa"></i>
+            <i class="fa-solid fa-bounce fa-earth-africa"></i>
           </a>
         </h5>
       </li>

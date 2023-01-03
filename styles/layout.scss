@@ -13,7 +13,6 @@ ul {
   padding: 0;
   display: flex;
   flex-direction: row;
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fsports-background&psig=AOvVaw2iU49b7jgCF1JKvZEUv8Vr&ust=1672860971407000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMCh__CSrPwCFQAAAAAdAAAAABAE");
 }
 
 li {
@@ -21,7 +20,27 @@ li {
 
 }
 
+.quizzes-container {
+  border: solid orange 3px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .quiz-sports {
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fsports-background&psig=AOvVaw2iU49b7jgCF1JKvZEUv8Vr&ust=1672860971407000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMCh__CSrPwCFQAAAAAdAAAAABAE");
+  background-image: url("/images/sports.jpeg");
   border: solid blue 3px;
+  padding: 10px;
+  color: white;
+  // background-color: lightblue;
+}
+
+.quiz-movies {
+  border: solid green 3px;
+  padding: 10px;
+
+}
+
+.quiz-countries {
+  border: solid red 3px;
+  padding: 10px;
 }

@@ -7,7 +7,8 @@ nav {
   align-items: center;
   height: 70px;
   color: #dbbebe;
-  background-color: rgb(100, 163, 142);
+  background-color: rgb(100, 163, 120);
+
 }
 
 .nav-brand  {
@@ -28,10 +29,13 @@ nav {
   font-size: medium;
   color:black;
   border: solid black 3px;
+
 }
 
 .nav-item {
-  border: solid pink 3px;
+  // border: solid pink 3px;
+  padding: 10px;
+  word-spacing: 5px;
 }
 
 
