@@ -11,6 +11,8 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+
+
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
 //         The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
@@ -48,6 +50,15 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/login', (req, res) => {
+  res.render('login')
+});
+
+app.get('/register', (req, res) => {
+  res.render('register')
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
+

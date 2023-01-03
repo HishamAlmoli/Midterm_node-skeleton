@@ -1,2 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- THIS PAGE IS WHERE THE REGISTRATION PAGE SHOWS-->
+<head>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+  <br/>
+  <form method="POST" action="/register">
+    Email:
+    <input type="email" name="email" required></input>
+    <br/><br/>
+    Password:
+    <input type="password" name="password" required></input>
+    <br/><br/>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
