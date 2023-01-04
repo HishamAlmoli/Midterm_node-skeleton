@@ -7,13 +7,13 @@
 
 const express = require('express');
 const router  = express.Router();
-const userQueries = require('../db/queries/quizzes');
+const userQueries = require('../db/queries/qAndAForQuiz');
 
-  router.get('/user_homepage', (req, res) => {
-    userQueries.getQuizzes()
+  router.get('/:id', (req, res) => {
+    userQueries.getquizQA(req.params.id)
       .then(quizzes => {
         // res.json({ users });
-        res.render("user_homepage", { data:quizzes });
+        res.render("qTest", { data:quizzes });
       })
       .catch(err => {
         res

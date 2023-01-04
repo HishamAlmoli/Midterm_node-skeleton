@@ -38,7 +38,7 @@ const usersRoutes = require('./routes/users');
 const loginRoutes = require('./routes/login');
 const registerRoutes = require('./routes/register');
 const createQuizRoutes = require('./routes/createQuiz');
-const user_homepage = require('./routes/quizzes-api');
+const user_homepage = require('./routes/quizQA-api');
 const genral_homepage = require('./routes/quizzes-api');
 
 // Mount all resource routes
@@ -50,7 +50,7 @@ app.use('/users', usersRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/createQuiz', createQuizRoutes);
-app.use('/api/users', user_homepage);
+app.use('/qtest', user_homepage);
 app.use('/home', genral_homepage);
 
 // Note: mount other resources here, using the same pattern above
@@ -62,6 +62,8 @@ app.use('/home', genral_homepage);
 app.get('/', (req, res) => {
   res.redirect('/home');
 });
+
+
 
 
 app.listen(PORT, () => {
