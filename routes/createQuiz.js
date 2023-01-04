@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  res.redirect('/');
   console.log('hello');
   // validation
 });

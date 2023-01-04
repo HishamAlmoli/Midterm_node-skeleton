@@ -1,48 +1,43 @@
 <!-- QUIZZES WILL BE CREATED ON THIS PAGE -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <title>Create New Quiz</title>
+    <%- include('partials/_assets') %>
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
-
-    <title>New URL - TinyApp Example</title>
   </head>
 
   <body>
     <%- include('partials/_header') %>
-
+    <div class="row justify-content-center">
+      <div class="col-md-6">
     <main style="margin: 1em;">
     <h3>Create a New Quiz</h3>
-    <form class="form-inline" action="/login" method="POST">
-      <label for="email">Email address
+    <form class="form-inline" action="/createQuiz" method="POST">
+      <label for="text">Quiz Title
       <input
-        type="email"
-        name="email"
-        placeholder="Enter email"
+        type="text"
+        name="title"
+        placeholder="Enter quiz title"
         style="width: 300px; margin: 1em"
       />
       </label>
 
-      <label for="password">Password
+      <label for="text">Questions
       <input
-        type="password"
-        name="password"
-        placeholder="Password"
+        type="text"
+        name="questions"
+        placeholder="Quiz questions"
         style="width: 300px; margin: 1em"
       />
     </label>
-      <button type="submit" class="btn btn-primary">Login</button>
+    <label for="text">Answers
+      <input
+        type="text"
+        name="answers"
+        placeholder="Quiz answers"
+        style="width: 300px; margin: 1em"
+      />
+    </label>
+
+      <button type="submit" class="btn btn-primary">Create Quiz</button>
 
   </form>
 </main>
