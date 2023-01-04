@@ -7,23 +7,35 @@ nav {
   align-items: center;
   height: 70px;
   color: #dbbebe;
-  background-color: rgb(100, 163, 142);
+  background-color: rgb(100, 163, 120);
+
 }
 
 .nav-brand  {
   font-family: "Bungee", sans-serif;
   padding-right: 1.5em;
   padding-left: 1.5em;
+  font-size: 30px;
+  // border: solid purple 3px;
 }
 
 .navbar-nav {
   display: flex;
   flex-direction: row;
+  // justify-content: space-evenly;
   font-family: 'Source Sans Pro', sans-serif;
   padding-right: 1.5em;
   padding-left: 1.5em;
   font-size: medium;
   color:black;
+  // border: solid black 3px;
+
+}
+
+.nav-item {
+  // border: solid pink 3px;
+  padding: 10px;
+  // word-spacing: 5px;
 }
 
 
