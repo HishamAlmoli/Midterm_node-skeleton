@@ -9,17 +9,17 @@
 
   </head>
 
-  <body>
+  <body class="login-container">
     <%- include('partials/_header') %>
 
     <main style="margin: 1em;">
       <h3>Login</h3>
       <form class="form-inline" action="/login" method="POST">
-          <label for="email">Email address
+          <label for="name">Username
           <input
-            type="email"
-            name="email"
-            placeholder="Enter email"
+            type="name"
+            name="name"
+            placeholder="Enter username"
             style="width: 300px; margin: 1em"
           />
           </label>
