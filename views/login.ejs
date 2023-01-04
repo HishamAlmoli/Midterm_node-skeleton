@@ -35,6 +35,15 @@
           <button type="submit" class="btn btn-primary">Login</button>
 
       </form>
+
+      <div>
+       <% data.forEach(function (user) { %>
+
+        <div><%= user.name %></div>
+       <% }) %>
+      </div>
+
+
     </div>
 
 
