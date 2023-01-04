@@ -4,16 +4,19 @@
  *   these routes are mounted onto /api/quizzes
  * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
  */
-
+//const db = require('../connection');
 const express = require('express');
 const router  = express.Router();
 const userQueries = require('../db/queries/quizzes');
 
-  router.get('/user_homepage', (req, res) => {
+  router.get('/', (req, res) => {
+    console.log("quizzesTest1");
     userQueries.getQuizzes()
       .then(quizzes => {
         // res.json({ users });
-        res.render("user_homepage", { data:quizzes });
+        console.log("quizzesTest2");
+        console.log("Quizzes"+ {quizzes});
+        res.render("index", { data:quizzes });
       })
       .catch(err => {
         res
