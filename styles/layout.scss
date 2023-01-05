@@ -36,11 +36,19 @@ li {
 
 .quiz-movies {
   // border: solid green 3px;
+  height: 200px;
+  width: 400px;
+  background-image: url("/images/movies.jpeg");
   padding: 10px;
+  color: white;
+  background-size: 400px 200px;
 
 }
 
 .quiz-countries {
   // border: solid red 3px;
+  background-image: url("/images/countries.jpeg");
   padding: 10px;
+  color: white;
 }
+

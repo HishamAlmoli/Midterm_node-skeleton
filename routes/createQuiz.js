@@ -6,9 +6,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  console.log('hello');
+  res.redirect('/');
+  // console.log('hello');
   // validation
 });
-
 
 module.exports = router;
