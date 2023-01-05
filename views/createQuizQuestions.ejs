@@ -6,6 +6,7 @@
 
   <body>
     <%- include('partials/_header') %>
+
     <div class="row justify-content-center">
       <div class="col-md-6">
     <main style="margin: 1em;">
@@ -36,6 +37,14 @@
         />
     </label>
 
+    <label for="text">QuizID
+      <input
+        type="text"
+        name="QuizID"
+        style="width: 300px; margin: 1em"
+        value=<%=quizId%>
+      />
+      </label>
       <button type="submit" class="btn btn-primary">Add a question</button>
 
   </form>
