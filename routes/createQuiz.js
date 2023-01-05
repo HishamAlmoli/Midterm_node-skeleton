@@ -6,12 +6,13 @@ router.get('/', (req, res) => {
   res.render('createQuiz');
 });
 
-router.post('/', (req, res) => {
-  userQueries.addQuiz(
+router.post('/', async (req, res) => {
+  await quizQueries.addQuiz(
     req.body.title,
     req.body.isPublic);
-  console.log('idd '+ getQuizId());
-  res.render("createQuizQuestions");
+    let quizId = await quizQueries.getQuizId();
+  console.log('idd '+ quizId);
+  res.render("createQuizQuestions", {quizId});
   // userQueries.getQuizId()
   // .then(quizId => {
   //   res.render("createQuizQuestions", { data:quizId });
