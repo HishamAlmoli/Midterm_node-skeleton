@@ -2,8 +2,6 @@ const express = require('express');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
-
-
   res.render('createQuiz');
 });
 
@@ -13,3 +11,4 @@ router.post('/', (req, res) => {
   // validation
 });
 
+module.exports = router;

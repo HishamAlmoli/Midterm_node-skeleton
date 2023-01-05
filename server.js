@@ -51,7 +51,10 @@ app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/createQuiz', createQuizRoutes);
 app.use('/api/users', user_homepage);
-app.use('/sports', quizQuestions);
+app.use('/quizzes', quizQuestions);
+// app.use('/movies', quizQuestions);
+// app.use('/countries', quizQuestions);
+
 
 // Note: mount other resources here, using the same pattern above
 
