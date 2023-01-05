@@ -39,7 +39,7 @@ const loginRoutes = require('./routes/login');
 const registerRoutes = require('./routes/register');
 const createQuizRoutes = require('./routes/createQuiz');
 const user_homepage = require('./routes/quizQA-api');
-const genral_homepage = require('./routes/quizzes-api');
+const general_homepage = require('./routes/quizzes-api');
 const user_homepage2 = require('./routes/quizzes-api');
 const quizQuestions = require('./routes/questions');
 
@@ -53,7 +53,7 @@ app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/createQuiz', createQuizRoutes);
 app.use('/qtest', user_homepage);
-app.use('/home', genral_homepage);
+app.use('/home', general_homepage);
 app.use('/api/users', user_homepage2);
 app.use('/quizzes', quizQuestions);
 // app.use('/movies', quizQuestions);
