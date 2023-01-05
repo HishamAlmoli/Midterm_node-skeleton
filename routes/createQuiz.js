@@ -7,6 +7,10 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  userQueries.addQuiz(
+    req.body.title,
+    req.body.isPublic);
+  console.log('idd '+ getQuizId());
   res.render("createQuizQuestions");
   // userQueries.getQuizId()
   // .then(quizId => {
