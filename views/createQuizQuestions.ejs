@@ -7,30 +7,39 @@
   <body>
     <%- include('partials/_header') %>
     <div class="row justify-content-center">
-    <div class="col-md-6">
+      <div class="col-md-6">
     <main style="margin: 1em;">
-      <h3>Create a New Quiz</h3>
-      <form class="form-inline" action="/createQuiz" method="POST">
-        <label for="text">Quiz Title
-        <input
-          type="text"
-          name="title"
-          placeholder="Enter quiz title"
-          style="width: 300px; margin: 1em"
-        />
-        </label>
-        <label for="text">Is it public
-          <input
+    <h3>Create a New Question</h3>
+    <form class="form-inline" action="/createQuiz" method="POST">
+      <label for="text">Quiz Title
+      <input
+        type="text"
+        name="title"
+        placeholder="Enter quiz title"
+        style="width: 300px; margin: 1em"
+      />
+      </label>
+
+      <label for="text">Questions
+      <input
+        type="text"
+        name="questions"
+        placeholder="Quiz questions"
+        style="width: 300px; margin: 1em"
+      />
+    </label>
+    <label for="text">Is the correct answer True?
+      <input
           id="opt1"
           type="checkbox"
           name="check1"
-          />
-        </label>
+        />
+    </label>
 
-        <button type="submit" class="btn btn-primary">Create Quiz</button>
+      <button type="submit" class="btn btn-primary">Add a question</button>
 
-      </form>
-    </main>
+  </form>
+</main>
 
 
 

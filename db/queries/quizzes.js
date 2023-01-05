@@ -16,4 +16,4 @@ const getQuizById = (quizId) => {
 module.exports = {
   getQuizzes,
   getQuizById
- };
+};
