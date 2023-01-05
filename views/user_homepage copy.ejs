@@ -30,8 +30,10 @@
   <body>
     <header>
       <nav>
+        <a href="/home/<%= user_id %>">
           <h1>KWIZY</h1>
         </a>
+        <a href="/home/<%= user_id %>">
           <div class="create-quiz-link">
             Home
           </div>
@@ -39,6 +41,33 @@
       </nav>
     </header>
     <div class="main-container">
+      <% if (userData.length > 0) {%>
+      <h1>Welcome <%= userData[0].users_name %>!</h1>
+      <a href="/users/createquiz/<%= userData[0].user_id %>">
+        <div class="create-quiz-link">
+          Create your own quiz!
+        </div>
+      </a>
+      <h2>Here are your quizzes:</h2>
+      <div class="links-container">
+        <% for (let quiz of userData) {%>
+        <div class="quiz-cont">
+          <a href="/attempts/<%= quiz.id%>/<%= quiz.user_id %>">
+            <div class="quiz-link">
+              <%= quiz.name %>
+              <br>
+              <p><%= quiz.description %></p>
+            </div>
+          </a>
+          <form method="POST" action="/users/<%= quiz.user_id %>/delete/<%= quiz.id %>">
+            <button class="delete-btn" type="submit">Delete Quiz?
+            </button>
+          </form>
+          <br>
+        </div>
+        <%}%>
+    </div>
+    <% } else { %>
         <h1>Welcome!</h1>
         <a href="/users/createquiz/<%= user_id %>">
           <div class="create-quiz-link">

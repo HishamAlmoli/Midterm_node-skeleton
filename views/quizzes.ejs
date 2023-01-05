@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Quiz Page</title>
+  <%- include('partials/_assets') %>
+
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+ <%console.log(data)%>
+
+
+  <header>
+    <h1 class="quiz-title"><%=quizTitle%></h1>
+  </header>
+
+<section class="question-container">
+  <% for (const question of data) { %>
+    <div class="question">
+      <p>
+        <%=question.question%>
+      </p>
+    </div>
+  <% } %>
+</section>
+
