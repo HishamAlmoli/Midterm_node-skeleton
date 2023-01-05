@@ -38,6 +38,10 @@ const usersRoutes = require('./routes/users');
 const loginRoutes = require('./routes/login');
 const registerRoutes = require('./routes/register');
 const createQuizRoutes = require('./routes/createQuiz');
+const user_homepage = require('./routes/quizQA-api');
+const genral_homepage = require('./routes/quizzes-api');
+const user_homepage2 = require('./routes/quizzes-api');
+const quizQuestions = require('./routes/questions');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -48,6 +52,13 @@ app.use('/users', usersRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/createQuiz', createQuizRoutes);
+app.use('/qtest', user_homepage);
+app.use('/home', genral_homepage);
+app.use('/api/users', user_homepage2);
+app.use('/quizzes', quizQuestions);
+// app.use('/movies', quizQuestions);
+// app.use('/countries', quizQuestions);
+
 
 // Note: mount other resources here, using the same pattern above
 
@@ -56,8 +67,10 @@ app.use('/createQuiz', createQuizRoutes);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.redirect('/home');
 });
+
+
 
 
 app.listen(PORT, () => {
@@ -72,3 +85,4 @@ app.get('/login/:id', (req, res) => {
   // send the user somewhere
   res.redirect('/');
 });
+

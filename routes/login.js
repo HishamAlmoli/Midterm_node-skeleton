@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+<<<<<<< HEAD
   const name = req.body.name;
   const password = req.body.password;
   db.login(name, password)
@@ -24,6 +25,11 @@ router.post('/', (req, res) => {
       .status(500)
       .json({ error: err.message });
   });
+=======
+  console.log('hello');
+  res.redirect('/');
+  // validation
+>>>>>>> origin/master
 });
 
 

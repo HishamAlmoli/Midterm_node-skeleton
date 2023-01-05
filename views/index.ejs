@@ -20,7 +20,13 @@
     <ul class="quizzes-container">
       <li>
         <h5>
-          <a class="quiz-sports" href="/sports">Sports
+          <div>
+            <% data.forEach(function (quiz) { %>
+
+             <div><%= quiz.title %></div>
+            <% }) %>
+          </div>
+          <a class="quiz-sports" href="/quizzes/1">Sports
             <i class="fa-solid fa-bounce fa-basketball">
               <!-- <img src="images/sports.jpeg"> -->
             </i>
@@ -29,7 +35,7 @@
       </li>
       <li>
         <h5>
-          <a class="quiz-movies" href="/movies">Movies
+          <a class="quiz-movies" href="/quizzes/2">Movies
             <i class="fa-solid fa-bounce fa-duotone fa-film"></i>
           </a>
         </h5>
@@ -37,7 +43,7 @@
       </li>
       <li>
         <h5>
-          <a class="quiz-countries" href="/countries">Countries
+          <a class="quiz-countries" href="/quizzes/3">Countries
             <i class="fa-solid fa-bounce fa-earth-africa"></i>
           </a>
         </h5>
