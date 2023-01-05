@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
   SELECT quizzes.id, users.id AS user_id, users.name AS user_name, quizzes.title, iSPublic
   FROM quizzes
   JOIN users ON user_id = users.id
-  WHERE user_id = $
+  WHERE user_id = $1
 `, [req.params.id])
     .then(user => {
       let templateVar = {userData: user.rows, user_id: req.params.id};
@@ -39,10 +39,6 @@ router.get("/createQuiz/:user_id", (req, res) => {
   res.render('../views/createQuiz', templateVar);
 })
 
-
-
-const express = require('express');
-const router  = express.Router();
 
 router.get('/', (req, res) => {
   res.render('login');
