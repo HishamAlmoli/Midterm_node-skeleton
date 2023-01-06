@@ -11,41 +11,61 @@
       <div class="col-md-6">
     <main style="margin: 1em;">
     <h3>Create a New Question</h3>
-    <form class="form-inline" action="/createQuiz" method="POST">
-      <label for="text">Quiz Title
-      <input
-        type="text"
-        name="title"
-        placeholder="Enter quiz title"
-        style="width: 300px; margin: 1em"
-      />
-      </label>
+    <form class="form-inline" action="/createQuestions" method="POST">
+      <div>
+        <label for="text">You can share your QuizID
+          <input
+            type="hidden"
+            name="QuizID"
+            style="width: 30px; margin: 1em"
+            value=<%=quizId%>
+          />
+        </label>
+      </div>
+
 
       <label for="text">Questions
       <input
         type="text"
-        name="questions"
+        name="question"
         placeholder="Quiz questions"
         style="width: 300px; margin: 1em"
       />
     </label>
-    <label for="text">Is the correct answer True?
+    <label for="text">First answer
+      <input
+        type="text"
+        name="answer1"
+        placeholder="answer"
+        style="width: 300px; margin: 1em"
+      />
+    </label>
+    <label for="text">Is this the correct answer?
       <input
           id="opt1"
-          type="checkbox"
+          type="radio"
           name="check1"
+          value=TRUE
+        />
+    </label>
+    <label for="text">Second answer
+      <input
+        type="text"
+        name="answer2"
+        placeholder="answer"
+        style="width: 300px; margin: 1em"
+      />
+    </label>
+    <label for="text">Is this the correct answer?
+      <input
+          id="opt2"
+          type="radio"
+          name="check2"
         />
     </label>
 
-    <label for="text">QuizID
-      <input
-        type="text"
-        name="QuizID"
-        style="width: 300px; margin: 1em"
-        value=<%=quizId%>
-      />
-      </label>
-      <button type="submit" class="btn btn-primary">Add a question</button>
+
+      <button type="submit" class="btn btn-primary">Add questions</button>
 
   </form>
 </main>

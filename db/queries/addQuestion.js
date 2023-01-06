@@ -6,24 +6,16 @@ const addQuestion = (quizId, question) => {
 };
 
 
-const addAnswer1 = (answer) => {
+const addAnswer1 = (answer, isCorrect) => {
   const max = db.query(`select max(id) from quizzes;`)
   const questionId = db.query(`select max(id) from questions;`);
-  let answer1 = true;
-  if (answer === false) {
-    answer1 = false;
-  }
-  return db.query(`INSERT INTO answers (question_id, answer, isCorrect) VALUES ($1, $2, $3);`, [questionId, 'True', answer1]);
+  return db.query(`INSERT INTO answers (question_id, answer, isCorrect) VALUES ($1, $2, $3);`, [questionId, answer, isCorrect]);
 };
 
-const addAnswer2 = (answer) => {
+const addAnswer2 = (answer, isCorrect) => {
   const max = db.query(`select max(id) from quizzes;`)
   const questionId = db.query(`select max(id) from questions;`);
-  let answer2 = false;
-  if (answer === false) {
-    answer2 = true;
-  }
-  return db.query(`INSERT INTO answers (question_id, answer, isCorrect) VALUES ($1, $2, $3);`, [questionId, 'False', answer2]);
+  return db.query(`INSERT INTO answers (question_id, answer, isCorrect) VALUES ($1, $2, $3);`, [questionId, answer, isCorrect]);
 };
 
 module.exports = {
@@ -31,6 +23,3 @@ module.exports = {
   addAnswer1,
   addAnswer2
 };
-
-
-module.exports = { addQuestion };
