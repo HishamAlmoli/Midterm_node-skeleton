@@ -13,10 +13,25 @@ const quizAnswers = require('../db/queries/answers')
       .then(results => {
         const questions = results[0];
         const quiz = results[1];
-        const answer = results[2]
+        const answers = results[2];
+
+for (let question of questions) {
+  console.log("question", question);
+  for (let answer of answers) {
+    console.log("answer", answer);
+    if (question.question === answer.question) {
+      if(!question.answers) {
+        question.answers = [];
+      }
+      question.answers.push(answer.answer);
+    }
+  }
+}
+console.log("questions", questions);
+
         // res.json({ users });
-        res.render("quizzes", { data:questions, quizTitle: quiz.title, quizAnswer: answer});
-        console.log(answer);
+        res.render("quizzes", { data:questions, quizTitle: quiz.title, quizAnswer: answers});
+        // console.log(answers);
       })
       .catch(err => {
         res
