@@ -11,23 +11,15 @@
   <%- include('partials/_header') %>
 
 
-
   <header>
     <h1 id="welcome">WELCOME TO QUIZAPP!</h1>
   </header>
-<div>
-            <% data.forEach(function (quiz) { %>
-
-             <div><%= quiz.title %></div>
-            <% }) %>
-          </div>
     <ul class="quizzes-container">
       <li>
         <h5>
 
           <a class="quiz-sports" href="/quizzes/1">Sports
             <i class="fa-solid fa-bounce fa-basketball">
-              <!-- <img src="images/sports.jpeg"> -->
             </i>
           </a>
         </h5>

@@ -15,5 +15,3 @@ INSERT INTO questions (quiz_id, question) VALUES (3, 'How many countries are in 
 INSERT INTO questions (quiz_id, question) VALUES (3, 'How many provinces are in Canada?');
 
 
-
-
