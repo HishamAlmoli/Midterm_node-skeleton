@@ -9,8 +9,7 @@
 
 <body>
   <%- include('partials/_header') %>
- <%console.log(data)%>
- <%console.log(quizAnswer)%>
+ <%console.log("This is for Questions", data)%>
 
 
   <header>
@@ -26,7 +25,20 @@
           <%=question.answer%>
 
       </p>
+  <% for (const answer of question.answers) { %>
+    <div class="answer">
+      <p>
+<input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <%=answer%>
+      </p>
+    </div>
+    <% } %>
     </div>
   <% } %>
 </section>
+
+<input type="radio" id="answer" name="answer" value="<%=answer%>">
+<label for="answer"><%=answer%></label><br>
+
 
