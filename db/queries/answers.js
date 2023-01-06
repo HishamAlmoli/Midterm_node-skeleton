@@ -13,4 +13,3 @@ const getQuizQA = (quizID) => {
     });
 };
 module.exports = { getQuizQA };
-

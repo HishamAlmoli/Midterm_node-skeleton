@@ -7,9 +7,16 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  let isPublic = false;
+  if (req.body.isPublic === true )
+  {
+    isPublic = true;
+  }
+  let title = req.body.title;
   await quizQueries.addQuiz(
-    req.body.title,
-    req.body.isPublic);
+    title,
+    isPublic
+    );
     let quizId = await quizQueries.getQuizId();
   console.log('idd '+ quizId);
   res.render("createQuizQuestions", {quizId});

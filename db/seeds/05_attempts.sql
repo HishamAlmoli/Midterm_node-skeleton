@@ -10,4 +10,3 @@ INSERT INTO attempts (user_id, quiz_id, result) VALUES (2, 3, 4);
 INSERT INTO attempts (user_id, quiz_id, result) VALUES (1, 2, 5);
 INSERT INTO attempts (user_id, quiz_id, result) VALUES (1, 1, 3);
 INSERT INTO attempts (user_id, quiz_id, result) VALUES (2, 2, 1);
-

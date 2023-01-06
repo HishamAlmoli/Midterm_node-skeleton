@@ -13,5 +13,3 @@ INSERT INTO questions (quiz_id, question) VALUES (3, 'Which country is the large
 INSERT INTO questions (quiz_id, question) VALUES (3, 'What is the smallest country in the world?');
 INSERT INTO questions (quiz_id, question) VALUES (3, 'How many countries are in Africa?');
 INSERT INTO questions (quiz_id, question) VALUES (3, 'How many provinces are in Canada?');
-
-
