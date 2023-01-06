@@ -14,16 +14,20 @@
   <header>
     <h1 id="welcome">WELCOME TO QUIZAPP!</h1>
   </header>
+
+  <button type="submit" class="btn btn-primary" action="/createQuizIndex" method="POST">Create Quiz</button>
+
+
   <div>
     <% data.forEach(function (quiz) { %>
     <div>
       <ul class="quizzes-container">
         <li><h5>
             <a class="quiz-title" href="/quizzes/<%= quiz.id %>"><%= quiz.title %>
-            <i class="fa-solid fa-bounce fa-basketball"></i></a>
+            <i class="fa-solid fa-bounce fa-question"></i></a>
         </h5></li>
-        <% }) %>
     </div>
+    <% }) %>
   </div>
 
 
